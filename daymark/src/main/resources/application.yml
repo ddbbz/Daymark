@@ -1,0 +1,50 @@
+server:
+  port: 8080
+
+spring:
+  profiles:
+    active: dev
+  main:
+    allow-circular-references: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/daymark
+    username: root
+    password: ${DB_PASSWORD:******}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+  #设置传输图片的最大值和传输总量最大值
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
+  #配置Redis信息
+  redis:
+    host: ${REDIS_HOST:192.168.150.101}
+    port: 6379
+    password: ${REDIS_PASSWORD:*******}
+    lettuce:
+      pool:
+        max-active: 8 # 最大连接
+        max-idle: 8 # 最大空闲连接
+        min-idle: 0 # 最小空闲连接
+        max-wait: 100 # 连接等待时间
+
+mybatis:
+  configuration:
+    #开启驼峰命名
+    map-underscore-to-camel-case: true
+
+mybatis-plus:
+  configuration:
+    # 控制台打印 MyBatis 执行的 SQL 与参数（排查问题时开启，定位后可注释掉）
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+jwt:
+  secret: ${JWT_SECRET:daymark-secret-key-please-change-me-0123456789abcdef}
+  expire: 604800000
+
+app:
+  base-url: http://localhost:21001/file/
+#用于管理员注册的口令
+reviewer:
+  invite-code: ${REVIEWER_INVITE_CODE:daymark-reviewer}

@@ -1,0 +1,1 @@
+import{f as e}from"./index-bEXSJFVQ.js";var t=e(`postDetail`,{state:()=>({cache:{}}),getters:{byId:e=>t=>e.cache[t]??null},actions:{cachePost(e){this.cache[e.id]=e}}});export{t};

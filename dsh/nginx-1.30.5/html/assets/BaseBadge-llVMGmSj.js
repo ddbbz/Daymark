@@ -1,0 +1,1 @@
+import{O as e,T as t,d as n,h as r,t as i,ut as a}from"./_plugin-vue_export-helper-dbEObNQx.js";var o=i(r({__name:`BaseBadge`,props:{tone:{default:`default`}},setup(r){return(i,o)=>(t(),n(`span`,{class:a([`badge`,`badge--${r.tone}`])},[e(i.$slots,`default`,{},void 0,!0)],2))}}),[[`__scopeId`,`data-v-22045649`]]);export{o as t};

@@ -1,0 +1,19 @@
+# ===== 后端 Java/Maven =====
+daymark/target/
+*.class
+*.jar
+*.war
+
+# ===== IDE / 系统 =====
+.idea/
+*.iml
+.DS_Store
+.vscode/
+
+# ===== 日志与本地临时文件 =====
+*.log
+.dsh-*.log
+.dsh-*.ps1
+
+# ===== 合并大仓库时留下的原子仓库备份（确认无误后可删除）=====
+**/.git_backup/

@@ -1,0 +1,31 @@
+/* ===== 排版与全局基线 ===== */
+:root {
+  color-scheme: light;
+}
+
+body {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 2px solid var(--c-brand);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: var(--c-brand-soft);
+  color: var(--c-brand);
+}
+
+/* 细滚动条 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--c-text-3);
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
